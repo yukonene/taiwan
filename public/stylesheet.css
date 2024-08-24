@@ -1,0 +1,172 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.title {
+  color: red;
+  margin: 0px;
+  padding: 20px;
+  font-size: 50px;
+}
+
+header {
+  background-color: black;
+  height: 100px;
+}
+
+footer {
+  background-color: black;
+  height: 100px;
+  color: aliceblue;
+}
+
+.main-contents {
+  background-image: url(/img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-grow: 1; /*縦に伸ばす*/
+  position: relative;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex; /* 親につけるやつ */
+  flex-direction: column; /* 縦に伸ばす設定をする*/
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer; /* カーソル形状 */
+  transition: 0.3s;
+}
+
+.syoku {
+  position: absolute;
+  top: 25%;
+  left: 70%;
+}
+
+.raku {
+  position: absolute;
+  top: 5%;
+  left: 45%;
+}
+
+.kan {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+.caption {
+  font-size: 25px;
+  color: rgb(226, 45, 45);
+  margin-top: 15px;
+}
+
+.contents {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+}
+
+.contents-item img {
+  max-width: 260px;
+}
+
+.name {
+  margin: 0%;
+  color: whitesmoke;
+}
+
+.food-list {
+  padding: 24px;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: red;
+}
+
+a:visited {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+  /* スマホ */
+  .button {
+    display: inline-block;
+    cursor: pointer; /* カーソル形状 */
+    transition: 0.3s;
+  }
+
+  .button img {
+    width: 200px;
+  }
+
+  .syoku {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+  }
+
+  .raku {
+    position: absolute;
+    top: 2%;
+    left: 20%;
+  }
+
+  .kan {
+    position: absolute;
+    top: 55%;
+    left: 2%;
+  }
+
+  .contents {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1028px) {
+  /*　タブレット　*/
+  .button img {
+    width: 250px;
+  }
+
+  .syoku {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+  }
+
+  .raku {
+    position: absolute;
+    top: 2%;
+    left: 35%;
+  }
+
+  .kan {
+    position: absolute;
+    top: 55%;
+    left: 8%;
+  }
+}
